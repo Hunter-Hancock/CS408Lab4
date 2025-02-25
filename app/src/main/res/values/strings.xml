@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Lab04</string>
+    <string name="fragment_id">#</string>
+    <string name="total">Total:</string>
+    <string name="percent">Percent:</string>
+    <string name="calculate">Calculate</string>
+    <string name="number_of_people">Number of People:</string>
+    <string name="result">$%s</string>
+    <string name="miles">Miles:</string>
+    <string name="kilometers">Kilometers:</string>
+    <string name="convert">Convert</string>
+</resources>

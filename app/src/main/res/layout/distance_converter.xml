@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideWest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideEast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/milesLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/miles"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/milesInput"
+        app:layout_constraintEnd_toStartOf="@+id/milesInput"
+        app:layout_constraintStart_toStartOf="@+id/guideWest" />
+
+    <EditText
+        android:id="@+id/milesInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/guideEast"
+        app:layout_constraintStart_toEndOf="@id/milesLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kilometersLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/kilometers"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/kilometersInput"
+        app:layout_constraintEnd_toStartOf="@+id/kilometersInput"
+        app:layout_constraintStart_toStartOf="@+id/guideWest" />
+
+    <EditText
+        android:id="@+id/kilometersInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@id/kilometersLabel"
+        app:layout_constraintEnd_toStartOf="@+id/guideEast"
+        app:layout_constraintTop_toBottomOf="@+id/milesInput" />
+
+    <Button
+        android:id="@+id/convertBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/convert"
+        app:layout_constraintEnd_toStartOf="@+id/guideEast"
+        app:layout_constraintStart_toStartOf="@+id/guideWest"
+        app:layout_constraintTop_toBottomOf="@+id/kilometersInput" />
+</androidx.constraintlayout.widget.ConstraintLayout>
